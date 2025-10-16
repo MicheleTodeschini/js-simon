@@ -20,6 +20,11 @@ let userNumber = []
 
 const numberEL = document.getElementById('number-field')
 const userEL = document.getElementById('user-field')
+const input1EL = document.getElementById('input1')
+const input2EL = document.getElementById('input2')
+const input3EL = document.getElementById('input3')
+const input4EL = document.getElementById('input4')
+const input5EL = document.getElementById('input5')
 const buttonEL = document.getElementById('button')
 // ciclo for per generare i 5 numeri random
 for (let i = 0; i < 5; i++) {
@@ -43,6 +48,22 @@ setTimeout(() => {
 }, 6000);
 
 buttonEL.addEventListener('click', (event) => {
+    event.preventDefault()
+    const n1 = Number(input1EL.value)
+    const n2 = Number(input2EL.value)
+    const n3 = Number(input3EL.value)
+    const n4 = Number(input4EL.value)
+    const n5 = Number(input5EL.value)
+    console.log(n5);
+    let userNumber = [n1, n2, n3, n4, n5]
+    console.log(userNumber);
 
-}
-)
+    if (condition) {
+
+    } else {
+
+    }
+
+})
+
+
