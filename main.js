@@ -11,6 +11,8 @@ NOTA: non è importante l'ordine con cui l'utente inserisce i numeri, basta che 
 
 let randomNumber = []
 let userNumber = []
+let timerEL = document.getElementById('timer')
+let counter = 5
 
 // creare 5 numeri random
 // pusharli in pagina
@@ -18,12 +20,19 @@ let userNumber = []
 
 
 const numberEL = document.getElementById('number-field')
-
+// ciclo for per generare i 5 numeri random
 for (let i = 0; i < 5; i++) {
     const numeroCasuale = Math.floor(Math.random() * 101)
     randomNumber.push(numeroCasuale);
 }
 
 console.log(randomNumber);
-
+// formula per farmi vedere i 5 numeri in pagina
 numberEL.innerHTML = randomNumber
+
+console.log(counter);
+
+// dopo 5 secondi mi fa scomparire i numeri
+setTimeout(() => {
+    document.getElementById("number-field").textContent = "Ora tocca a te";
+}, 5000);
