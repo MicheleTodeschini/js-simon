@@ -26,6 +26,8 @@ const input3EL = document.getElementById('input3')
 const input4EL = document.getElementById('input4')
 const input5EL = document.getElementById('input5')
 const buttonEL = document.getElementById('button')
+let resultEL = document.getElementById('result')
+let result = []
 // ciclo for per generare i 5 numeri random
 for (let i = 0; i < 5; i++) {
     const numeroCasuale = Math.floor(Math.random() * 101)
@@ -58,11 +60,20 @@ buttonEL.addEventListener('click', (event) => {
     let userNumber = [n1, n2, n3, n4, n5]
     console.log(userNumber);
 
-    if (condition) {
-
-    } else {
+    for (let i = 0; i < userNumber.length; i++) {
+        const numero = userNumber[i];
+        if (randomNumber.includes(numero)) {
+            console.log(`hai indovinato ${numero}`);
+            result.push(numero)
+        }
 
     }
+
+    console.log(result);
+    console.log(result.length);
+    resultEL.innerHTML = `Hai indovinato ${result}`
+
+
 
 })
 
