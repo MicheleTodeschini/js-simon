@@ -20,6 +20,7 @@ let userNumber = []
 
 const numberEL = document.getElementById('number-field')
 const userEL = document.getElementById('user-field')
+const buttonEL = document.getElementById('button')
 // ciclo for per generare i 5 numeri random
 for (let i = 0; i < 5; i++) {
     const numeroCasuale = Math.floor(Math.random() * 101)
@@ -40,3 +41,8 @@ setTimeout(() => {
 setTimeout(() => {
     document.getElementById("user-field").style.opacity = 1;
 }, 6000);
+
+buttonEL.addEventListener('click', (event) => {
+
+}
+)
